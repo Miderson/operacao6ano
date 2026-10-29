@@ -1,0 +1,301 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --preto: #101014;
+  --vermelho: #e21c32;
+  --branco: #f6f6f8;
+  --cinza: #aeb0b8;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    #3d101a,
+    #0b0b0e 55%
+  );
+  color: var(--branco);
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 760px;
+  margin: auto;
+  padding: 22px 16px 36px;
+}
+
+/* CABEÇALHO */
+
+.topo {
+  padding: 28px 22px;
+  text-align: center;
+  background: repeating-linear-gradient(
+    115deg,
+    #17171b 0 30px,
+    #211016 30px 55px
+  );
+  border: 1px solid #63202b;
+  border-radius: 20px 20px 0 0;
+}
+
+.marca {
+  color: #ff6072;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.serie {
+  display: inline-block;
+  margin-left: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--vermelho);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.topo h1 {
+  font-size: 36px;
+  margin: 15px 0 8px;
+}
+
+.topo p {
+  color: white;
+  font-weight: bold;
+}
+
+/* PAINÉIS */
+
+.painel {
+  padding: 30px;
+  background: #1b1b21;
+  border: 1px solid #393039;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 18px 50px #0007;
+}
+
+.oculto {
+  display: none !important;
+}
+
+h2 {
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+p {
+  color: #c4c4cb;
+  line-height: 1.6;
+}
+
+/* FORMULÁRIO */
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #4b4b55;
+  border-radius: 10px;
+  background: #101014;
+  color: white;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #ff6072;
+}
+
+/* BOTÕES */
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 11px;
+  background: var(--vermelho);
+  color: white;
+  padding: 15px 18px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  filter: brightness(1.15);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.secundario {
+  background: #383840;
+}
+
+.erro {
+  color: #ff8392;
+  min-height: 20px;
+}
+
+/* PROGRESSO */
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.barra {
+  height: 9px;
+  background: #3b3035;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 18px 0 25px;
+}
+
+#barraPreenchida {
+  height: 100%;
+  width: 0;
+  background: var(--vermelho);
+  transition: width 0.2s;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 7px 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: #381921;
+  color: #ff8c9b;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ALTERNATIVAS */
+
+.alternativas {
+  display: grid;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.alternativa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  padding: 16px;
+  background: #292930;
+  border: 1px solid #49434a;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+}
+
+.alternativa.selecionada {
+  background: #501923;
+  border-color: #ff6174;
+}
+
+.letra {
+  min-width: 30px;
+  padding: 6px;
+  text-align: center;
+  background: #3f3f48;
+  border-radius: 7px;
+}
+
+.acoes {
+  display: flex;
+  gap: 12px;
+}
+
+.acoes button {
+  flex: 1;
+}
+
+/* RESULTADO */
+
+.placar {
+  text-align: center;
+  padding: 25px;
+  background: #31141c;
+  border: 1px solid #77313d;
+  border-radius: 15px;
+  margin: 25px 0;
+}
+
+.placar strong {
+  display: block;
+  font-size: 60px;
+  color: #ff6477;
+}
+
+.placar span {
+  color: white;
+}
+
+.itemCorrecao {
+  border-bottom: 1px solid #393039;
+  padding: 15px 0;
+}
+
+.certo {
+  color: #74dda6;
+}
+
+.errado {
+  color: #ff8996;
+}
+
+#resultado > button {
+  width: 100%;
+  margin: 8px 0;
+}
+
+footer {
+  text-align: center;
+  color: #a2a2aa;
+  font-size: 12px;
+  padding: 22px 0;
+}
+
+/* CELULARES */
+
+@media (max-width: 500px) {
+  .topo h1 {
+    font-size: 28px;
+  }
+
+  .painel {
+    padding: 20px;
+  }
+
+  .acoes {
+    flex-direction: column;
+  }
+
+  .acoes button {
+    width: 100%;
+  }
+
+  .linha {
+    flex-wrap: wrap;
+  }
+}

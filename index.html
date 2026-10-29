@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Matemática em Jogo - 6º Ano</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="app">
+
+    <header class="topo">
+      <span class="marca">◆ DESAFIO MATEMÁTICO</span>
+      <span class="serie">6º ANO</span>
+
+      <h1>Matemática em Jogo</h1>
+      <p>Prof. Miderson & Prof. Renata</p>
+    </header>
+
+    <!-- TELA DE ENTRADA -->
+    <section id="login" class="painel">
+      <h2>Entrar no desafio</h2>
+
+      <p>
+        Resolva 10 situações-problema sorteadas
+        de um banco com 50 questões.
+      </p>
+
+      <form id="loginForm">
+
+        <label for="nome">Nome do aluno</label>
+        <input
+          id="nome"
+          type="text"
+          required
+          placeholder="Digite seu nome completo"
+        >
+
+        <label for="turma">Turma</label>
+        <input
+          id="turma"
+          type="text"
+          required
+          placeholder="Exemplo: 6º A"
+        >
+
+        <label for="senha">Senha de acesso</label>
+        <input
+          id="senha"
+          type="password"
+          required
+          placeholder="Digite a senha"
+        >
+
+        <p id="erroLogin" class="erro"></p>
+
+        <button type="submit">
+          Iniciar teste
+        </button>
+
+      </form>
+    </section>
+
+    <!-- TELA DAS QUESTÕES -->
+    <section id="quiz" class="painel oculto">
+
+      <div class="linha">
+        <span id="alunoInfo"></span>
+        <span id="progresso"></span>
+      </div>
+
+      <div class="barra">
+        <div id="barraPreenchida"></div>
+      </div>
+
+      <span id="tema" class="etiqueta"></span>
+
+      <h2 id="enunciado"></h2>
+
+      <div id="alternativas" class="alternativas"></div>
+
+      <p id="aviso" class="erro"></p>
+
+      <div class="acoes">
+        <button id="anterior" class="secundario" type="button">
+          ← Anterior
+        </button>
+
+        <button id="proximo" type="button">
+          Próxima →
+        </button>
+      </div>
+
+    </section>
+
+    <!-- TELA DO RESULTADO -->
+    <section id="resultado" class="painel oculto">
+
+      <h2>Resultado do desafio</h2>
+
+      <p id="resumoAluno"></p>
+
+      <div class="placar">
+        <strong id="nota"></strong>
+        <span id="mensagem"></span>
+      </div>
+
+      <h3>Correção das questões</h3>
+
+      <div id="correcao"></div>
+
+      <button id="refazer" type="button">
+        Fazer novo teste
+      </button>
+
+      <button id="sair" class="secundario" type="button">
+        Sair
+      </button>
+
+    </section>
+
+    <footer>
+      Prof. Miderson & Prof. Renata
+      <p>Aprender matemática é superar desafios!</p>
+    </footer>
+
+  </main>
+</body>
+</html>
